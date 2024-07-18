@@ -38,7 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <>
-      <nav className="px-10 pt-5">
+      <nav className="px-10 pt-5 max-w-screen-2xl mx-auto">
         <Link to={"/"} prefetch="intent" className="text-2xl font-semibold">
           Movie<span className="text-teal-500">DB</span>
         </Link>

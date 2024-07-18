@@ -28,8 +28,7 @@ export async function loader({}: LoaderFunctionArgs) {
 }
 
 export default function Index() {
-  const data = useLoaderData();
-  console.log(data);
+  const data: any = useLoaderData();
   return (
     <div className="bg-white py-6 sm:py-8 lg:py-12">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
@@ -41,7 +40,7 @@ export default function Index() {
 
         <div className="grid , sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gird-cols-4 xl:gap-8">
           {data.results.map((movie: any) => (
-            <div className="flex flex-col overflow-hidden rounded-lg border bg-white">
+            <div className="flex flex-col overflow-hidden rounded-lg border bg-white mb-3">
               <Link
                 to={`movie/${movie.id}/comments`}
                 prefetch="intent"
